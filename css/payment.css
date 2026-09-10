@@ -633,6 +633,20 @@
 
 }
 
+.summary-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 12px;
+    margin: 18px 0 0;
+    padding-left: 18px;
+    color: var(--slate-600);
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.summary-features li::marker {
+    color: var(--green);
+}
 
 .summary-divider {
 

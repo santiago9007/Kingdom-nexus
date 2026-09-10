@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard Basico | Kingdom Nexus</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="../../css/variables.css" />
+    <link rel="stylesheet" href="../../css/base.css" />
+    <link rel="stylesheet" href="../../css/dashboard.css" />
+    <link rel="stylesheet" href="../../css/plan-dashboard.css" />
+  </head>
+  <body>
+    <div class="dashboard-shell">
+      <aside class="sidebar">
+        <div>
+          <div class="brand-box">
+            <img src="../../images/nexus.png" alt="Kingdom Nexus" />
+          </div>
+          <nav class="nav-menu" aria-label="Menú profesional">
+            <button class="nav-item active" type="button">
+              <i data-lucide="layout-dashboard"></i><span>Dashboard</span>
+            </button>
+            <button class="nav-item" type="button">
+              <i data-lucide="package"></i><span>Productos</span>
+            </button>
+            <button class="nav-item" type="button">
+              <i data-lucide="boxes"></i><span>Inventario</span>
+            </button>
+            <button class="nav-item" type="button">
+              <i data-lucide="arrow-right-left"></i><span>Movimientos</span>
+            </button>
+            <button class="nav-item" type="button">
+              <i data-lucide="users"></i><span>Clientes</span>
+            </button>
+            <button class="nav-item" type="button">
+              <i data-lucide="truck"></i><span>Proveedores</span>
+            </button>
+            <button class="nav-item" type="button">
+              <i data-lucide="shopping-cart"></i><span>Compras</span>
+            </button>
+            <button class="nav-item" type="button">
+              <i data-lucide="chart-no-axes-combined"></i
+              ><span>Reportes avanzados</span>
+            </button>
+          </nav>
+        </div>
+        <div class="plan-card">
+          <span class="plan-pill">BASICO</span><strong>Plan Basico</strong
+          ><small>$49.900 / mes</small>
+        </div>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Panel Basico</p>
+            <h1>Bienvenido a Kingdom Nexus</h1>
+          </div>
+          <div class="topbar-actions">
+            <div class="status-badge">
+              <i data-lucide="shield-check"></i> Suscripción activa
+            </div>
+            <div class="user-box">
+              <span class="avatar">U</span>
+              <div>
+                <strong id="userName">Usuario</strong>
+                <small id="userEmail">usuario@ejemplo.com</small>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <section class="hero-summary">
+          <div class="summary-copy">
+            <span class="summary-tag">Plan basico</span>
+            <h2>Más control para una operación que está creciendo.</h2>
+            <p>
+              Administra inventario, compras, clientes, proveedores y
+              movimientos desde un solo espacio.
+            </p>
+          </div>
+          <div class="summary-card">
+            <span>Próximo cobro</span><strong>$49.900</strong
+            ><small>Se cobrará al finalizar la prueba gratuita.</small>
+          </div>
+        </section>
+
+        <section class="stats-grid">
+          <article class="stat-card">
+            <div class="stat-header">
+              <span>Productos</span><i data-lucide="package-check"></i>
+            </div>
+            <strong>--</strong><small>Catálogo completo</small>
+          </article>
+          <article class="stat-card">
+            <div class="stat-header">
+              <span>Sucursales</span><i data-lucide="building-2"></i>
+            </div>
+            <strong>--</strong><small>1 sucursal</small>
+          </article>
+          <article class="stat-card">
+            <div class="stat-header">
+              <span>Compras</span><i data-lucide="shopping-cart"></i>
+            </div>
+            <strong>--</strong><small>Gestión de proveedores</small>
+          </article>
+          <article class="stat-card">
+            <div class="stat-header">
+              <span>Alertas</span><i data-lucide="bell-ring"></i>
+            </div>
+            <strong>--</strong><small>Alertas inteligentes</small>
+          </article>
+        </section>
+
+        <section class="content-grid plan-module-grid">
+          <article class="panel panel-large">
+            <div class="panel-header">
+              <h3>Módulos del plan</h3>
+              <span class="panel-badge">Básico</span>
+            </div>
+            <div class="modules-grid">
+              <div class="module-item enabled">
+                <i data-lucide="package"></i>
+                <div>
+                  <strong>Productos</strong
+                  ><small>Catálogo, categorías y marcas</small>
+                </div>
+              </div>
+              <div class="module-item enabled">
+                <i data-lucide="boxes"></i>
+                <div>
+                  <strong>Inventario</strong
+                  ><small>Existencias y trazabilidad</small>
+                </div>
+              </div>
+              <div class="module-item enabled">
+                <i data-lucide="arrow-right-left"></i>
+                <div>
+                  <strong>Movimientos</strong
+                  ><small>Entradas, salidas y transferencias</small>
+                </div>
+              </div>
+              <div class="module-item enabled">
+                <i data-lucide="users"></i>
+                <div>
+                  <strong>Clientes</strong><small>Gestión de clientes</small>
+                </div>
+              </div>
+              <div class="module-item enabled">
+                <i data-lucide="truck"></i>
+                <div>
+                  <strong>Proveedores</strong
+                  ><small>Directorio y relaciones comerciales</small>
+                </div>
+              </div>
+              <div class="module-item enabled">
+                <i data-lucide="shopping-cart"></i>
+                <div>
+                  <strong>Compras</strong><small>Control de compras</small>
+                </div>
+              </div>
+              <div class="module-item enabled">
+                <i data-lucide="bar-chart-3"></i>
+                <div>
+                  <strong>Reportes avanzados</strong
+                  ><small>Indicadores para decidir mejor</small>
+                </div>
+              </div>
+              <div class="module-item enabled">
+                <i data-lucide="bell-ring"></i>
+                <div>
+                  <strong>Alertas inteligentes</strong
+                  ><small>Seguimiento de incidencias</small>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="panel">
+            <div class="panel-header">
+              <h3>Actividad reciente</h3>
+              <span class="panel-badge">Básico</span>
+            </div>
+            <ul class="activity-list">
+              <li>
+                <span class="dot success"></span>
+                <div>
+                  <strong>Actividad de inventario</strong
+                  ><small>Sin datos recientes</small>
+                </div>
+              </li>
+              <li>
+                <span class="dot info"></span>
+                <div>
+                  <strong>Movimientos registrados</strong
+                  ><small>Sin datos recientes</small>
+                </div>
+              </li>
+              <li>
+                <span class="dot warning"></span>
+                <div>
+                  <strong>Alertas pendientes</strong
+                  ><small>Sin datos recientes</small>
+                </div>
+              </li>
+            </ul>
+          </article>
+        </section>
+      </main>
+    </div>
+    <script>
+      lucide.createIcons();
+    </script>
+    <script src="/js/dashboard.js"></script>
+  </body>
+</html>

@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard Empresarial | Kingdom Nexus</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="../css/variables.css" />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/dashboard.css" />
+    <link rel="stylesheet" href="../css/plan-dashboard.css" />
+  </head>
+  <body>
+    <div class="dashboard-shell">
+      <aside class="sidebar">
+        <div>
+          <div class="brand-box">
+            <img src="../images/nexus.png" alt="Kingdom Nexus" />
+          </div>
+          <nav class="nav-menu" aria-label="Menú empresarial">
+            <button class="nav-item active" type="button">
+              <i data-lucide="layout-dashboard"></i><span>Dashboard</span>
+            </button>
+            <button class="nav-item" type="button">
+              <i data-lucide="package"></i><span>Productos</span>
+            </button>
+            <button class="nav-item" type="button">
+              <i data-lucide="boxes"></i><span>Inventario central</span>
+            </button>
+            <button class="nav-item" type="button">
+              <i data-lucide="building-2"></i><span>Sucursales</span>
+            </button>
+            <button class="nav-item" type="button">
+              <i data-lucide="arrow-right-left"></i><span>Transferencias</span>
+            </button>
+            <button class="nav-item" type="button">
+              <i data-lucide="shopping-bag"></i><span>Ventas</span>
+            </button>
+            <button class="nav-item" type="button">
+              <i data-lucide="shopping-cart"></i><span>Compras</span>
+            </button>
+            <button class="nav-item" type="button">
+              <i data-lucide="users"></i><span>Usuarios</span>
+            </button>
+            <button class="nav-item" type="button">
+              <i data-lucide="file-search"></i><span>Auditoría</span>
+            </button>
+            <button class="nav-item" type="button">
+              <i data-lucide="bar-chart-3"></i><span>Reportes</span>
+            </button>
+          </nav>
+        </div>
+        <div class="plan-card">
+          <span class="plan-pill">EMPRESARIAL</span
+          ><strong>Plan Empresarial</strong><small>$199.900 / mes</small>
+        </div>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Panel empresarial</p>
+            <h1>Bienvenido a Kingdom Nexus</h1>
+          </div>
+          <div class="topbar-actions">
+            <div class="status-badge">
+              <i data-lucide="shield-check"></i> Suscripción activa
+            </div>
+            <div class="user-box">
+              <span class="avatar">U</span>
+              <div>
+                <strong>Usuario</strong><small>usuario@ejemplo.com</small>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <section class="hero-summary">
+          <div class="summary-copy">
+            <span class="summary-tag">Plan empresarial</span>
+            <h2>Una operación centralizada para crecer sin límites.</h2>
+            <p>
+              Supervisa sucursales, equipos, inventario, ventas, compras y
+              auditoría desde una vista unificada.
+            </p>
+          </div>
+          <div class="summary-card">
+            <span>Próximo cobro</span><strong>$199.900</strong
+            ><small>Se cobrará al finalizar la prueba gratuita.</small>
+          </div>
+        </section>
+
+        <section class="stats-grid">
+          <article class="stat-card">
+            <div class="stat-header">
+              <span>Sucursales</span><i data-lucide="building-2"></i>
+            </div>
+            <strong>--</strong><small>Sin límite de sucursales</small>
+          </article>
+          <article class="stat-card">
+            <div class="stat-header">
+              <span>Inventario</span><i data-lucide="boxes"></i>
+            </div>
+            <strong>--</strong><small>Vista centralizada</small>
+          </article>
+          <article class="stat-card">
+            <div class="stat-header">
+              <span>Ventas</span><i data-lucide="shopping-bag"></i>
+            </div>
+            <strong>--</strong><small>Operación consolidada</small>
+          </article>
+          <article class="stat-card">
+            <div class="stat-header">
+              <span>Auditoría</span><i data-lucide="file-search"></i>
+            </div>
+            <strong>--</strong><small>Historial completo</small>
+          </article>
+        </section>
+
+        <section class="content-grid plan-module-grid">
+          <article class="panel panel-large">
+            <div class="panel-header">
+              <h3>Módulos del plan</h3>
+              <span class="panel-badge">Empresarial</span>
+            </div>
+            <div class="modules-grid">
+              <div class="module-item enabled">
+                <i data-lucide="package"></i>
+                <div>
+                  <strong>Productos</strong><small>Catálogo centralizado</small>
+                </div>
+              </div>
+              <div class="module-item enabled">
+                <i data-lucide="boxes"></i>
+                <div>
+                  <strong>Inventario por sucursal</strong
+                  ><small>Existencias por ubicación</small>
+                </div>
+              </div>
+              <div class="module-item enabled">
+                <i data-lucide="building-2"></i>
+                <div>
+                  <strong>Sucursales</strong><small>Gestión sin límites</small>
+                </div>
+              </div>
+              <div class="module-item enabled">
+                <i data-lucide="arrow-right-left"></i>
+                <div>
+                  <strong>Transferencias</strong
+                  ><small>Movimientos entre sucursales</small>
+                </div>
+              </div>
+              <div class="module-item enabled">
+                <i data-lucide="shopping-bag"></i>
+                <div>
+                  <strong>Ventas</strong><small>Gestión de ventas</small>
+                </div>
+              </div>
+              <div class="module-item enabled">
+                <i data-lucide="shopping-cart"></i>
+                <div>
+                  <strong>Compras</strong><small>Gestión de compras</small>
+                </div>
+              </div>
+              <div class="module-item enabled">
+                <i data-lucide="users"></i>
+                <div>
+                  <strong>Usuarios</strong><small>Usuarios ilimitados</small>
+                </div>
+              </div>
+              <div class="module-item enabled">
+                <i data-lucide="file-search"></i>
+                <div>
+                  <strong>Auditoría</strong
+                  ><small>Historial y trazabilidad completa</small>
+                </div>
+              </div>
+              <div class="module-item enabled">
+                <i data-lucide="bell-ring"></i>
+                <div>
+                  <strong>Alertas inteligentes</strong
+                  ><small>Seguimiento de incidencias</small>
+                </div>
+              </div>
+              <div class="module-item enabled">
+                <i data-lucide="bar-chart-3"></i>
+                <div>
+                  <strong>Reportes</strong
+                  ><small>Visión consolidada del negocio</small>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="panel">
+            <div class="panel-header">
+              <h3>Actividad reciente</h3>
+              <span class="panel-badge">Empresarial</span>
+            </div>
+            <ul class="activity-list">
+              <li>
+                <span class="dot success"></span>
+                <div>
+                  <strong>Actividad de sucursales</strong
+                  ><small>Sin datos recientes</small>
+                </div>
+              </li>
+              <li>
+                <span class="dot info"></span>
+                <div>
+                  <strong>Transferencias registradas</strong
+                  ><small>Sin datos recientes</small>
+                </div>
+              </li>
+              <li>
+                <span class="dot warning"></span>
+                <div>
+                  <strong>Eventos de auditoría</strong
+                  ><small>Sin datos recientes</small>
+                </div>
+              </li>
+            </ul>
+          </article>
+        </section>
+      </main>
+    </div>
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>

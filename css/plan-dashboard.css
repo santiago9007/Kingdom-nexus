@@ -1,0 +1,43 @@
+.plan-module-grid {
+    align-items: start;
+}
+
+.plan-module-grid .modules-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media (max-width: 900px) {
+    .dashboard-shell {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        gap: 20px;
+    }
+
+    .nav-menu {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .plan-card {
+        display: none;
+    }
+
+    .main-panel {
+        padding: 24px 20px;
+    }
+}
+
+@media (max-width: 560px) {
+    .topbar,
+    .topbar-actions {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .nav-menu,
+    .plan-module-grid .modules-grid {
+        grid-template-columns: 1fr;
+    }
+}

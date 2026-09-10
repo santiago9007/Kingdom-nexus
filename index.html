@@ -1,1345 +1,985 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta name="description" content="Kingdom Nexus: gestión inteligente de inventario para pequeños, medianos y grandes negocios.">
+    <meta
+      name="description"
+      content="Kingdom Nexus: gestión inteligente de inventario para pequeños, medianos y grandes negocios."
+    />
 
     <title>Kingdom Nexus - Gestión inteligente de inventario</title>
 
     <!-- Fuente Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <!-- CSS propio -->
-    <link rel="stylesheet" href="css/variables.css">
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<body>
-
-<!-- =====================================================
+  <body>
+    <!-- =====================================================
      NAVBAR
 ====================================================== -->
 
-<nav class="navbar">
-    <a href="#inicio" class="navbar-logo" aria-label="Kingdom Nexus - Inicio">
-        <img src="images/nexus.png" alt="Kingdom Nexus" width="150">
-    </a>
+    <nav class="navbar">
+      <a href="#inicio" class="navbar-logo" aria-label="Kingdom Nexus - Inicio">
+        <img src="images/nexus.png" alt="Kingdom Nexus" width="150" />
+      </a>
 
-    <div class="navbar-links">
+      <div class="navbar-links">
         <a href="#beneficios">Beneficios</a>
         <a href="#funciones">Funciones</a>
         <a href="#planes">Planes</a>
-    </div>
+      </div>
 
-    <div class="navbar-actions">
+      <div class="navbar-actions">
         <a href="#" class="login-button">Sobre Nosotros</a>
         <a href="login.html" class="sesion">Iniciar sesión</a>
-    </div>
-</nav>
+      </div>
+    </nav>
 
-
-<!-- =====================================================
+    <!-- =====================================================
      HERO
 ====================================================== -->
 
-<header id="inicio" class="hero">
+    <header id="inicio" class="hero">
+      <div class="grid-bg"></div>
 
-    <div class="grid-bg"></div>
+      <div class="hero-glow hero-glow-one"></div>
+      <div class="hero-glow hero-glow-two"></div>
 
-    <div class="hero-glow hero-glow-one"></div>
-    <div class="hero-glow hero-glow-two"></div>
-
-    <div class="hero-content">
-
+      <div class="hero-content">
         <div class="hero-badge">
+          <i data-lucide="sparkles"></i>
 
-            <i data-lucide="sparkles"></i>
-
-            Gestión inteligente para negocios que quieren crecer
-
+          Gestión inteligente para negocios que quieren crecer
         </div>
 
-        <p class="hero-eyebrow">
-            KINGDOM NEXUS
-        </p>
+        <p class="hero-eyebrow">KINGDOM NEXUS</p>
 
         <h1>
-            Controla tu inventario.
-            <br>
+          Controla tu inventario.
+          <br />
 
-            <span>
-                Reduce pérdidas.
-            </span>
+          <span> Reduce pérdidas. </span>
 
-            <br>
+          <br />
 
-            Aumenta tus ganancias.
+          Aumenta tus ganancias.
         </h1>
 
         <p class="hero-description">
-            Gestiona productos, inventario, ventas y compras
-            desde una sola plataforma. Obtén información clara
-            para tomar mejores decisiones y hacer crecer tu negocio.
+          Gestiona productos, inventario, ventas y compras desde una sola
+          plataforma. Obtén información clara para tomar mejores decisiones y
+          hacer crecer tu negocio.
         </p>
 
         <div class="hero-buttons">
+          <a href="register.html" class="btn-primary">
+            Registrarse
+            <i data-lucide="arrow-right"></i>
+          </a>
 
-            <a href="register.html" class="btn-primary">
-                Registrarse
-                <i data-lucide="arrow-right"></i>
-            </a>
+          <a href="#producto" class="btn-secondary">
+            Ver plataforma
 
-            <a
-                href="#producto"
-                class="btn-secondary"
-            >
-                Ver plataforma
-
-                <i data-lucide="play-circle"></i>
-            </a>
-
+            <i data-lucide="play-circle"></i>
+          </a>
         </div>
 
         <div class="hero-trust">
+          <div class="trust-item">
+            <i data-lucide="check-circle-2"></i>
+            Sin instalaciones
+          </div>
 
-            <div class="trust-item">
-                <i data-lucide="check-circle-2"></i>
-                Sin instalaciones
-            </div>
+          <div class="trust-item">
+            <i data-lucide="check-circle-2"></i>
+            Gestión desde cualquier lugar
+          </div>
 
-            <div class="trust-item">
-                <i data-lucide="check-circle-2"></i>
-                Gestión desde cualquier lugar
-            </div>
-
-            <div class="trust-item">
-                <i data-lucide="check-circle-2"></i>
-                Diseñado para crecer contigo
-            </div>
-
+          <div class="trust-item">
+            <i data-lucide="check-circle-2"></i>
+            Diseñado para crecer contigo
+          </div>
         </div>
+      </div>
+    </header>
 
-    </div>
-
-</header>
-
-
-<!-- =====================================================
+    <!-- =====================================================
      BENEFICIOS
 ====================================================== -->
 
-<section
-    id="beneficios"
-    class="beneficios"
->
-
-    <div class="container">
-
+    <section id="beneficios" class="beneficios">
+      <div class="container">
         <div class="section-heading">
+          <span class="section-label"> TODO BAJO CONTROL </span>
 
-            <span class="section-label">
-                TODO BAJO CONTROL
-            </span>
+          <h2>Todo lo que tu negocio necesita</h2>
 
-            <h2>
-                Todo lo que tu negocio necesita
-            </h2>
-
-            <p class="section-description">
-                Una plataforma diseñada para ayudarte a controlar
-                tu operación sin convertir la gestión del inventario
-                en un dolor de cabeza.
-            </p>
-
+          <p class="section-description">
+            Una plataforma diseñada para ayudarte a controlar tu operación sin
+            convertir la gestión del inventario en un dolor de cabeza.
+          </p>
         </div>
 
         <div class="beneficios-grid">
+          <!-- Card 1 -->
 
-            <!-- Card 1 -->
+          <article class="beneficio-card">
+            <div class="icon-box icon-blue">
+              <i data-lucide="bar-chart-3"></i>
+            </div>
 
-            <article class="beneficio-card">
+            <h3>Información en tiempo real</h3>
 
-                <div class="icon-box icon-blue">
-                    <i data-lucide="bar-chart-3"></i>
-                </div>
+            <p>
+              Consulta existencias, movimientos, ventas y compras desde un solo
+              lugar para tomar decisiones basadas en información actualizada.
+            </p>
 
-                <h3>
-                    Información en tiempo real
-                </h3>
+            <a href="#producto" class="card-link">
+              Ver cómo funciona
+              <i data-lucide="arrow-right"></i>
+            </a>
+          </article>
 
-                <p>
-                    Consulta existencias, movimientos, ventas y
-                    compras desde un solo lugar para tomar decisiones
-                    basadas en información actualizada.
-                </p>
+          <!-- Card 2 -->
 
-                <a href="#producto" class="card-link">
-                    Ver cómo funciona
-                    <i data-lucide="arrow-right"></i>
-                </a>
+          <article class="beneficio-card">
+            <div class="icon-box icon-red">
+              <i data-lucide="bell-ring"></i>
+            </div>
 
-            </article>
+            <h3>Evita pérdidas</h3>
 
+            <p>
+              Recibe alertas sobre productos con stock bajo, sobrestock y
+              productos próximos a vencer para actuar antes de que representen
+              una pérdida.
+            </p>
 
-            <!-- Card 2 -->
+            <a href="#funciones" class="card-link">
+              Conocer funciones
+              <i data-lucide="arrow-right"></i>
+            </a>
+          </article>
 
-            <article class="beneficio-card">
+          <!-- Card 3 -->
 
-                <div class="icon-box icon-red">
-                    <i data-lucide="bell-ring"></i>
-                </div>
+          <article class="beneficio-card">
+            <div class="icon-box icon-green">
+              <i data-lucide="building-2"></i>
+            </div>
 
-                <h3>
-                    Evita pérdidas
-                </h3>
+            <h3>Crece sin complicaciones</h3>
 
-                <p>
-                    Recibe alertas sobre productos con stock bajo,
-                    sobrestock y productos próximos a vencer para
-                    actuar antes de que representen una pérdida.
-                </p>
+            <p>
+              Comienza con una tienda y escala hasta múltiples sucursales,
+              usuarios y ubicaciones sin cambiar la plataforma.
+            </p>
 
-                <a href="#funciones" class="card-link">
-                    Conocer funciones
-                    <i data-lucide="arrow-right"></i>
-                </a>
-
-            </article>
-
-
-            <!-- Card 3 -->
-
-            <article class="beneficio-card">
-
-                <div class="icon-box icon-green">
-                    <i data-lucide="building-2"></i>
-                </div>
-
-                <h3>
-                    Crece sin complicaciones
-                </h3>
-
-                <p>
-                    Comienza con una tienda y escala hasta múltiples
-                    sucursales, usuarios y ubicaciones sin cambiar
-                    la plataforma.
-                </p>
-
-                <a href="#tipos-negocio" class="card-link">
-                    Ver planes
-                    <i data-lucide="arrow-right"></i>
-                </a>
-
-            </article>
-
+            <a href="#tipos-negocio" class="card-link">
+              Ver planes
+              <i data-lucide="arrow-right"></i>
+            </a>
+          </article>
         </div>
+      </div>
+    </section>
 
-    </div>
-
-</section>
-
-
-<!-- =====================================================
+    <!-- =====================================================
      PRODUCTO / MOCKUP
 ====================================================== -->
 
-<section
-    id="producto"
-    class="producto"
->
-
-    <div class="container">
-
+    <section id="producto" class="producto">
+      <div class="container">
         <div class="producto-grid">
+          <div class="producto-content">
+            <span class="section-label"> TU NEGOCIO EN UN SOLO LUGAR </span>
 
-            <div class="producto-content">
+            <h2>Una visión clara de lo que está pasando.</h2>
 
-                <span class="section-label">
-                    TU NEGOCIO EN UN SOLO LUGAR
-                </span>
+            <p>
+              Kingdom Nexus centraliza la información de tu negocio para que
+              puedas saber qué tienes, qué necesitas y dónde estás perdiendo
+              dinero.
+            </p>
 
-                <h2>
-                    Una visión clara de lo que está pasando.
-                </h2>
-
-                <p>
-                    Kingdom Nexus centraliza la información de tu
-                    negocio para que puedas saber qué tienes,
-                    qué necesitas y dónde estás perdiendo dinero.
-                </p>
-
-                <div class="producto-points">
-
-                    <div class="producto-point">
-
-                        <div class="point-icon">
-                            <i data-lucide="package"></i>
-                        </div>
-
-                        <div>
-                            <strong>
-                                Control de productos
-                            </strong>
-
-                            <span>
-                                Organiza tu catálogo, categorías,
-                                marcas y existencias.
-                            </span>
-                        </div>
-
-                    </div>
-
-
-                    <div class="producto-point">
-
-                        <div class="point-icon">
-                            <i data-lucide="arrow-left-right"></i>
-                        </div>
-
-                        <div>
-                            <strong>
-                                Movimientos registrados
-                            </strong>
-
-                            <span>
-                                Conoce cuándo, cómo y quién modificó
-                                el inventario.
-                            </span>
-                        </div>
-
-                    </div>
-
-
-                    <div class="producto-point">
-
-                        <div class="point-icon">
-                            <i data-lucide="trending-up"></i>
-                        </div>
-
-                        <div>
-                            <strong>
-                                Decisiones basadas en datos
-                            </strong>
-
-                            <span>
-                                Convierte la información de tu negocio
-                                en acciones concretas.
-                            </span>
-                        </div>
-
-                    </div>
-
+            <div class="producto-points">
+              <div class="producto-point">
+                <div class="point-icon">
+                  <i data-lucide="package"></i>
                 </div>
 
-            </div>
+                <div>
+                  <strong> Control de productos </strong>
 
+                  <span>
+                    Organiza tu catálogo, categorías, marcas y existencias.
+                  </span>
+                </div>
+              </div>
 
-            <!-- Dashboard Mockup -->
-
-            <div class="dashboard-preview">
-
-                <div class="dashboard-window">
-
-                    <div class="window-header">
-
-                        <div class="window-dots">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-
-                        <span>
-                            Kingdom Nexus
-                        </span>
-
-                        <div class="window-profile">
-                            <i data-lucide="user"></i>
-                        </div>
-
-                    </div>
-
-
-                    <div class="dashboard-body">
-
-                        <aside class="preview-sidebar">
-
-                            <div class="preview-logo">
-                                KN
-                            </div>
-
-                            <div class="preview-menu">
-
-                                <span class="active">
-                                    <i data-lucide="layout-dashboard"></i>
-                                </span>
-
-                                <span>
-                                    <i data-lucide="package"></i>
-                                </span>
-
-                                <span>
-                                    <i data-lucide="warehouse"></i>
-                                </span>
-
-                                <span>
-                                    <i data-lucide="shopping-cart"></i>
-                                </span>
-
-                                <span>
-                                    <i data-lucide="users"></i>
-                                </span>
-
-                                <span>
-                                    <i data-lucide="bar-chart-3"></i>
-                                </span>
-
-                            </div>
-
-                        </aside>
-
-
-                        <div class="preview-content">
-
-                            <div class="preview-top">
-
-                                <div>
-                                    <span>
-                                        Dashboard
-                                    </span>
-
-                                    <h3>
-                                        Resumen general
-                                    </h3>
-                                </div>
-
-                                <div class="preview-date">
-                                    <i data-lucide="calendar"></i>
-                                    Agosto 2026
-                                </div>
-
-                            </div>
-
-
-                            <div class="preview-cards">
-
-                                <div class="preview-card">
-
-                                    <span>
-                                        Productos
-                                    </span>
-
-                                    <strong>
-                                        1.245
-                                    </strong>
-
-                                    <small class="positive">
-                                        +8.2%
-                                    </small>
-
-                                </div>
-
-                                <div class="preview-card">
-
-                                    <span>
-                                        Ventas
-                                    </span>
-
-                                    <strong>
-                                        $8.4M
-                                    </strong>
-
-                                    <small class="positive">
-                                        +12.4%
-                                    </small>
-
-                                </div>
-
-                                <div class="preview-card">
-
-                                    <span>
-                                        Stock bajo
-                                    </span>
-
-                                    <strong>
-                                        18
-                                    </strong>
-
-                                    <small class="warning">
-                                        Requiere atención
-                                    </small>
-
-                                </div>
-
-                            </div>
-
-
-                            <div class="preview-chart">
-
-                                <div class="chart-header">
-
-                                    <span>
-                                        Movimiento de ventas
-                                    </span>
-
-                                    <span>
-                                        Últimos 7 días
-                                    </span>
-
-                                </div>
-
-                                <div class="chart">
-
-                                    <div class="chart-bars">
-
-                                        <span style="height: 35%;"></span>
-                                        <span style="height: 48%;"></span>
-                                        <span style="height: 42%;"></span>
-                                        <span style="height: 67%;"></span>
-                                        <span style="height: 58%;"></span>
-                                        <span style="height: 82%;"></span>
-                                        <span style="height: 72%;"></span>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
+              <div class="producto-point">
+                <div class="point-icon">
+                  <i data-lucide="arrow-left-right"></i>
                 </div>
 
-            </div>
+                <div>
+                  <strong> Movimientos registrados </strong>
 
+                  <span>
+                    Conoce cuándo, cómo y quién modificó el inventario.
+                  </span>
+                </div>
+              </div>
+
+              <div class="producto-point">
+                <div class="point-icon">
+                  <i data-lucide="trending-up"></i>
+                </div>
+
+                <div>
+                  <strong> Decisiones basadas en datos </strong>
+
+                  <span>
+                    Convierte la información de tu negocio en acciones
+                    concretas.
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dashboard Mockup -->
+
+          <div class="dashboard-preview">
+            <div class="dashboard-window">
+              <div class="window-header">
+                <div class="window-dots">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+
+                <span> Kingdom Nexus </span>
+
+                <div class="window-profile">
+                  <i data-lucide="user"></i>
+                </div>
+              </div>
+
+              <div class="dashboard-body">
+                <aside class="preview-sidebar">
+                  <div class="preview-logo">KN</div>
+
+                  <div class="preview-menu">
+                    <span class="active">
+                      <i data-lucide="layout-dashboard"></i>
+                    </span>
+
+                    <span>
+                      <i data-lucide="package"></i>
+                    </span>
+
+                    <span>
+                      <i data-lucide="warehouse"></i>
+                    </span>
+
+                    <span>
+                      <i data-lucide="shopping-cart"></i>
+                    </span>
+
+                    <span>
+                      <i data-lucide="users"></i>
+                    </span>
+
+                    <span>
+                      <i data-lucide="bar-chart-3"></i>
+                    </span>
+                  </div>
+                </aside>
+
+                <div class="preview-content">
+                  <div class="preview-top">
+                    <div>
+                      <span> Dashboard </span>
+
+                      <h3>Resumen general</h3>
+                    </div>
+
+                    <div class="preview-date">
+                      <i data-lucide="calendar"></i>
+                      Agosto 2026
+                    </div>
+                  </div>
+
+                  <div class="preview-cards">
+                    <div class="preview-card">
+                      <span> Productos </span>
+
+                      <strong> 1.245 </strong>
+
+                      <small class="positive"> +8.2% </small>
+                    </div>
+
+                    <div class="preview-card">
+                      <span> Ventas </span>
+
+                      <strong> $8.4M </strong>
+
+                      <small class="positive"> +12.4% </small>
+                    </div>
+
+                    <div class="preview-card">
+                      <span> Stock bajo </span>
+
+                      <strong> 18 </strong>
+
+                      <small class="warning"> Requiere atención </small>
+                    </div>
+                  </div>
+
+                  <div class="preview-chart">
+                    <div class="chart-header">
+                      <span> Movimiento de ventas </span>
+
+                      <span> Últimos 7 días </span>
+                    </div>
+
+                    <div class="chart">
+                      <div class="chart-bars">
+                        <span style="height: 35%"></span>
+                        <span style="height: 48%"></span>
+                        <span style="height: 42%"></span>
+                        <span style="height: 67%"></span>
+                        <span style="height: 58%"></span>
+                        <span style="height: 82%"></span>
+                        <span style="height: 72%"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+    </section>
 
-    </div>
-
-</section>
-
-
-<!-- =====================================================
+    <!-- =====================================================
      FUNCIONALIDADES
 ====================================================== -->
 
-<section
-    id="funciones"
-    class="funciones"
->
-
-    <div class="container">
-
+    <section id="funciones" class="funciones">
+      <div class="container">
         <div class="section-heading">
+          <span class="section-label"> FUNCIONALIDADES </span>
 
-            <span class="section-label">
-                FUNCIONALIDADES
-            </span>
+          <h2>Mucho más que controlar existencias</h2>
 
-            <h2>
-                Mucho más que controlar existencias
-            </h2>
-
-            <p class="section-description">
-                Kingdom Nexus reúne las herramientas que necesitas
-                para administrar las operaciones de tu negocio.
-            </p>
-
+          <p class="section-description">
+            Kingdom Nexus reúne las herramientas que necesitas para administrar
+            las operaciones de tu negocio.
+          </p>
         </div>
-
 
         <div class="funciones-grid">
+          <article class="funcion-card">
+            <div class="funcion-icon">
+              <i data-lucide="package-search"></i>
+            </div>
 
-            <article class="funcion-card">
+            <h3>Gestión de productos</h3>
 
-                <div class="funcion-icon">
-                    <i data-lucide="package-search"></i>
-                </div>
+            <p>
+              Administra productos, categorías, marcas, códigos y precios desde
+              un solo lugar.
+            </p>
+          </article>
 
-                <h3>
-                    Gestión de productos
-                </h3>
+          <article class="funcion-card">
+            <div class="funcion-icon">
+              <i data-lucide="warehouse"></i>
+            </div>
 
-                <p>
-                    Administra productos, categorías, marcas,
-                    códigos y precios desde un solo lugar.
-                </p>
+            <h3>Control de inventario</h3>
 
-            </article>
+            <p>
+              Registra entradas, salidas, ajustes y movimientos para conocer
+              siempre tus existencias.
+            </p>
+          </article>
 
+          <article class="funcion-card">
+            <div class="funcion-icon">
+              <i data-lucide="shopping-cart"></i>
+            </div>
 
-            <article class="funcion-card">
+            <h3>Ventas</h3>
 
-                <div class="funcion-icon">
-                    <i data-lucide="warehouse"></i>
-                </div>
+            <p>
+              Registra tus ventas y conoce cómo se mueve cada producto dentro de
+              tu negocio.
+            </p>
+          </article>
 
-                <h3>
-                    Control de inventario
-                </h3>
+          <article class="funcion-card">
+            <div class="funcion-icon">
+              <i data-lucide="truck"></i>
+            </div>
 
-                <p>
-                    Registra entradas, salidas, ajustes y movimientos
-                    para conocer siempre tus existencias.
-                </p>
+            <h3>Compras y proveedores</h3>
 
-            </article>
+            <p>
+              Organiza tus proveedores y controla las compras que alimentan tu
+              inventario.
+            </p>
+          </article>
 
+          <article class="funcion-card">
+            <div class="funcion-icon">
+              <i data-lucide="users"></i>
+            </div>
 
-            <article class="funcion-card">
+            <h3>Clientes y usuarios</h3>
 
-                <div class="funcion-icon">
-                    <i data-lucide="shopping-cart"></i>
-                </div>
+            <p>
+              Gestiona clientes, usuarios, roles y permisos según las
+              necesidades de tu empresa.
+            </p>
+          </article>
 
-                <h3>
-                    Ventas
-                </h3>
+          <article class="funcion-card">
+            <div class="funcion-icon">
+              <i data-lucide="file-chart-column"></i>
+            </div>
 
-                <p>
-                    Registra tus ventas y conoce cómo se mueve
-                    cada producto dentro de tu negocio.
-                </p>
+            <h3>Reportes</h3>
 
-            </article>
-
-
-            <article class="funcion-card">
-
-                <div class="funcion-icon">
-                    <i data-lucide="truck"></i>
-                </div>
-
-                <h3>
-                    Compras y proveedores
-                </h3>
-
-                <p>
-                    Organiza tus proveedores y controla las compras
-                    que alimentan tu inventario.
-                </p>
-
-            </article>
-
-
-            <article class="funcion-card">
-
-                <div class="funcion-icon">
-                    <i data-lucide="users"></i>
-                </div>
-
-                <h3>
-                    Clientes y usuarios
-                </h3>
-
-                <p>
-                    Gestiona clientes, usuarios, roles y permisos
-                    según las necesidades de tu empresa.
-                </p>
-
-            </article>
-
-
-            <article class="funcion-card">
-
-                <div class="funcion-icon">
-                    <i data-lucide="file-chart-column"></i>
-                </div>
-
-                <h3>
-                    Reportes
-                </h3>
-
-                <p>
-                    Obtén información sobre inventario, ventas,
-                    compras y movimientos de tu negocio.
-                </p>
-
-            </article>
-
+            <p>
+              Obtén información sobre inventario, ventas, compras y movimientos
+              de tu negocio.
+            </p>
+          </article>
         </div>
+      </div>
+    </section>
 
-    </div>
-
-</section>
-
-
-<!-- =====================================================
+    <!-- =====================================================
      TIPOS DE NEGOCIO
 ====================================================== -->
 
-<section
-    id="tipos-negocio"
-    class="tipos-negocio"
->
-
-    <div class="container">
-
+    <section id="tipos-negocio" class="tipos-negocio">
+      <div class="container">
         <div class="section-heading">
+          <span class="section-label"> CRECE CON KINGDOM NEXUS </span>
 
-            <span class="section-label">
-                CRECE CON KINGDOM NEXUS
-            </span>
+          <h2>Un sistema que se adapta a tu negocio</h2>
 
-            <h2>
-                Un sistema que se adapta a tu negocio
-            </h2>
-
-            <p class="section-description">
-                Empieza con lo que necesitas hoy y adquiere
-                nuevas capacidades cuando tu negocio crezca.
-            </p>
-
+          <p class="section-description">
+            Empieza con lo que necesitas hoy y adquiere nuevas capacidades
+            cuando tu negocio crezca.
+          </p>
         </div>
-
 
         <div class="negocios-grid">
+          <article class="negocio-card">
+            <div class="negocio-number">01</div>
 
-            <article class="negocio-card">
+            <div class="negocio-icon">
+              <i data-lucide="store"></i>
+            </div>
 
-                <div class="negocio-number">
-                    01
-                </div>
+            <h3>Pequeños negocios</h3>
 
-                <div class="negocio-icon">
-                    <i data-lucide="store"></i>
-                </div>
+            <p>
+              Ideal para tiendas que necesitan dejar atrás el control manual y
+              comenzar a gestionar su inventario de forma organizada.
+            </p>
 
-                <h3>
-                    Pequeños negocios
-                </h3>
+            <ul>
+              <li>
+                <i data-lucide="check"></i>
+                Una sucursal
+              </li>
 
-                <p>
-                    Ideal para tiendas que necesitan dejar atrás
-                    el control manual y comenzar a gestionar
-                    su inventario de forma organizada.
-                </p>
+              <li>
+                <i data-lucide="check"></i>
+                Gestión de productos
+              </li>
 
-                <ul>
-                    <li>
-                        <i data-lucide="check"></i>
-                        Una sucursal
-                    </li>
+              <li>
+                <i data-lucide="check"></i>
+                Control de inventario
+              </li>
+            </ul>
+          </article>
 
-                    <li>
-                        <i data-lucide="check"></i>
-                        Gestión de productos
-                    </li>
+          <article class="negocio-card negocio-card-featured">
+            <div class="negocio-number">02</div>
 
-                    <li>
-                        <i data-lucide="check"></i>
-                        Control de inventario
-                    </li>
-                </ul>
+            <div class="negocio-icon">
+              <i data-lucide="building-2"></i>
+            </div>
 
-            </article>
+            <h3>Empresas en crecimiento</h3>
 
+            <p>
+              Para negocios que ya tienen una operación más compleja y necesitan
+              controlar ventas, compras, clientes y proveedores.
+            </p>
 
-            <article class="negocio-card negocio-card-featured">
+            <ul>
+              <li>
+                <i data-lucide="check"></i>
+                Múltiples sucursales
+              </li>
 
-                <div class="negocio-number">
-                    02
-                </div>
+              <li>
+                <i data-lucide="check"></i>
+                Compras y proveedores
+              </li>
 
-                <div class="negocio-icon">
-                    <i data-lucide="building-2"></i>
-                </div>
+              <li>
+                <i data-lucide="check"></i>
+                Reportes avanzados
+              </li>
+            </ul>
+          </article>
 
-                <h3>
-                    Empresas en crecimiento
-                </h3>
+          <article class="negocio-card">
+            <div class="negocio-number">03</div>
 
-                <p>
-                    Para negocios que ya tienen una operación
-                    más compleja y necesitan controlar ventas,
-                    compras, clientes y proveedores.
-                </p>
+            <div class="negocio-icon">
+              <i data-lucide="landmark"></i>
+            </div>
 
-                <ul>
-                    <li>
-                        <i data-lucide="check"></i>
-                        Múltiples sucursales
-                    </li>
+            <h3>Grandes empresas</h3>
 
-                    <li>
-                        <i data-lucide="check"></i>
-                        Compras y proveedores
-                    </li>
+            <p>
+              Para organizaciones que necesitan centralizar operaciones,
+              sucursales, usuarios e inventarios a gran escala.
+            </p>
 
-                    <li>
-                        <i data-lucide="check"></i>
-                        Reportes avanzados
-                    </li>
-                </ul>
+            <ul>
+              <li>
+                <i data-lucide="check"></i>
+                Sucursales ilimitadas
+              </li>
 
-            </article>
+              <li>
+                <i data-lucide="check"></i>
+                Gestión centralizada
+              </li>
 
-
-            <article class="negocio-card">
-
-                <div class="negocio-number">
-                    03
-                </div>
-
-                <div class="negocio-icon">
-                    <i data-lucide="landmark"></i>
-                </div>
-
-                <h3>
-                    Grandes empresas
-                </h3>
-
-                <p>
-                    Para organizaciones que necesitan centralizar
-                    operaciones, sucursales, usuarios e inventarios
-                    a gran escala.
-                </p>
-
-                <ul>
-                    <li>
-                        <i data-lucide="check"></i>
-                        Sucursales ilimitadas
-                    </li>
-
-                    <li>
-                        <i data-lucide="check"></i>
-                        Gestión centralizada
-                    </li>
-
-                    <li>
-                        <i data-lucide="check"></i>
-                        Auditoría y trazabilidad
-                    </li>
-                </ul>
-
-            </article>
-
+              <li>
+                <i data-lucide="check"></i>
+                Auditoría y trazabilidad
+              </li>
+            </ul>
+          </article>
         </div>
+      </div>
+    </section>
 
-    </div>
-
-</section>
-
-
-<!-- =====================================================
+    <!-- =====================================================
      PRECIOS
 ====================================================== -->
 
-<section
-    id="planes"
-    class="precios"
->
-
-    <div class="container">
-
+    <section id="planes" class="precios">
+      <div class="container">
         <div class="section-heading">
+          <span class="section-label"> PLANES </span>
 
-            <span class="section-label">
-                PLANES
-            </span>
+          <h2>Empieza donde estás. Crece hasta donde quieras.</h2>
 
-            <h2>
-                Empieza donde estás. Crece hasta donde quieras.
-            </h2>
-
-            <p class="section-description">
-                Elige el plan que mejor se adapte al tamaño
-                y las necesidades de tu negocio.
-            </p>
-
+          <p class="section-description">
+            Elige el plan que mejor se adapte al tamaño y las necesidades de tu
+            negocio.
+          </p>
         </div>
-
 
         <div class="pricing-grid">
-
-
-            <!-- BÁSICO -->
-
-            <article class="pricing-card">
-
-                <div class="pricing-header">
-
-                    <h3>
-                        Básico
-                    </h3>
-
-                    <p class="plan-description">
-                        Ideal para pequeños negocios
-                    </p>
-
-                </div>
-
-                <div class="price">
-                    <span>
-                        $49.900
-                    </span>
-
-                    <small>
-                        /mes
-                    </small>
-                </div>
-
-                <p class="price-note">
-                    Para comenzar a organizar tu negocio.
-                </p>
-
-                <div class="trial-label">
-                    <i data-lucide="gift"></i>
-                    14 días gratis
-                </div>
-
-                <ul class="features">
-
-                    <li>
-                        <i data-lucide="check"></i>
-                        1 sucursal
-                    </li>
-
-                    <li>
-                        <i data-lucide="check"></i>
-                        Gestión de productos
-                    </li>
-
-                    <li>
-                        <i data-lucide="check"></i>
-                        Control de inventario
-                    </li>
-
-                    <li>
-                        <i data-lucide="check"></i>
-                        Entradas y salidas
-                    </li>
-
-                    <li>
-                        <i data-lucide="check"></i>
-                        Alertas de stock bajo
-                    </li>
-
-                    <li>
-                        <i data-lucide="check"></i>
-                        Categorías y marcas
-                    </li>
-
-                    <li>
-                        <i data-lucide="check"></i>
-                        Ajustes de inventario
-                    </li>
-
-                    <li>
-                        <i data-lucide="check"></i>
-                        Reportes básicos
-                    </li>
-
-                    <li>
-                        <i data-lucide="check"></i>
-                        Importación Excel / CSV
-                    </li>
-
-                    <li>
-                        <i data-lucide="check"></i>
-                        Trazabilidad de inventario
-                    </li>
-
-                    <li>
-                        <i data-lucide="check"></i>
-                        Hasta 2 usuarios
-                    </li>
-
-                </ul>
-
-                <a href="register.html?plan=basic" class="btn-plan">Contratar</a>
-
-            </article>
-
-
-            <!-- PROFESIONAL -->
-
-            <article class="pricing-card pricing-card-featured">
-
-                <div class="popular-badge">
-                    MÁS POPULAR
-                </div>
-
-                <div class="pricing-header">
-
-                    <h3>
-                        Profesional
-                    </h3>
-
-                    <p class="plan-description">
-                        Para empresas en crecimiento
-                    </p>
-
-                </div>
-
-                <div class="price">
-                    <span>
-                        $99.900
-                    </span>
-
-                    <small>
-                        /mes
-                    </small>
-                </div>
-
-                <p class="price-note">
-                    Para operaciones que necesitan más control.
-                </p>
-
-                <div class="trial-label">
-                    <i data-lucide="gift"></i>
-                    14 días gratis
-                </div>
-
-                <ul class="features">
-
-                    <li>
-                        <i data-lucide="check"></i>
-                        Hasta 5 sucursales
-                    </li>
-
-                    <li>
-                        <i data-lucide="check"></i>
-                        Gestión completa de productos
-                    </li>
-
-                    <li>
-                        <i data-lucide="check"></i>
-                        Entradas, salidas y transferencias
-                    </li>
-
-                    <li>
-                        <i data-lucide="check"></i>
-                        Reportes avanzados
-                    </li>
-
-                    <li>
-                        <i data-lucide="check"></i>
-                        Gestión de clientes
-                    </li>
-
-                    <li>
-                        <i data-lucide="check"></i>
-                        Gestión de proveedores
-                    </li>
-
-                    <li>
-                        <i data-lucide="check"></i>
-                        Gestión de compras
-                    </li>
-
-                    <li>
-                        <i data-lucide="check"></i>
-                        Alertas inteligentes
-                    </li>
-
-                    <li>
-                        <i data-lucide="check"></i>
-                        Historial de movimientos
-                    </li>
-
-                    <li>
-                        <i data-lucide="check"></i>
-                        Trazabilidad de inventario
-                    </li>
-
-                </ul>
-
-                <a href="register.html?plan=professional" class="btn-plan btn-plan-primary">Contratar</a>
-
-            </article>
-
-
-            <!-- EMPRESARIAL -->
-
-            <article class="pricing-card">
-
-                <div class="pricing-header">
-
-                    <h3>
-                        Empresarial
-                    </h3>
-
-                    <p class="plan-description">
-                        Para operaciones a gran escala
-                    </p>
-
-                </div>
-
-                <div class="price">
-                    <span>
-                        $199.900
-                    </span>
-
-                    <small>
-                        /mes
-                    </small>
-                </div>
-
-                <p class="price-note">
-                    Control centralizado para grandes operaciones.
-                </p>
-
-                <div class="trial-label">
-                    <i data-lucide="gift"></i>
-                    14 días gratis
-                </div>
-
-                <ul class="features">
-
-                    <li>
-                        <i data-lucide="check"></i>
-                        Sucursales ilimitadas
-                    </li>
-
-                    <li>
-                        <i data-lucide="check"></i>
-                        Usuarios ilimitados
-                    </li>
-
-                    <li>
-                        <i data-lucide="check"></i>
-                        Gestión centralizada
-                    </li>
-
-                    <li>
-                        <i data-lucide="check"></i>
-                        Inventario por sucursal
-                    </li>
-
-                    <li>
-                        <i data-lucide="check"></i>
-                        Transferencias entre sucursales
-                    </li>
-
-                    <li>
-                        <i data-lucide="check"></i>
-                        Gestión de ventas
-                    </li>
-
-                    <li>
-                        <i data-lucide="check"></i>
-                        Gestión de compras
-                    </li>
-
-                    <li>
-                        <i data-lucide="check"></i>
-                        Alertas inteligentes
-                    </li>
-
-                    <li>
-                        <i data-lucide="check"></i>
-                        Auditoría de inventario
-                    </li>
-
-                    <li>
-                        <i data-lucide="check"></i>
-                        Trazabilidad de inventario
-                    </li>
-
-                    <li>
-                        <i data-lucide="check"></i>
-                        Historial completo
-                    </li>
-
-                </ul>
-
-                <a href="register.html?plan=enterprise" class="btn-plan">Contratar</a>
-
-            </article>
-
+          <!-- BÁSICO -->
+
+          <article class="pricing-card">
+            <div class="pricing-header">
+              <h3>Básico</h3>
+
+              <p class="plan-description">pequeños negocios, tiendas, emprendimientos y comercios con una sola ubicación.</p>
+            </div>
+
+            <div class="price">
+              <span> $49.900 </span>
+
+              <small> /mes </small>
+            </div>
+
+            <p class="price-note">Controla productos, inventario y ventas desde un solo lugar.</p>
+
+            <div class="trial-label">
+              <i data-lucide="gift"></i>
+              14 días gratis
+            </div>
+  
+            <ul class="features">
+              <li>
+                <i data-lucide="check"></i>
+                1 sucursal
+              </li>
+
+              <li>
+                <i data-lucide="check"></i>
+                Gestión de productos
+              </li>
+
+              <li>
+                <i data-lucide="check"></i>
+                Control de inventario
+              </li>
+
+              <li>
+                <i data-lucide="check"></i>
+                Entradas y salidas
+              </li>
+
+              <li>
+                <i data-lucide="check"></i>
+                Alertas de stock bajo
+              </li>
+
+              <li>
+                <i data-lucide="check"></i>
+                Categorías y marcas
+              </li>
+
+              <li>
+                <i data-lucide="check"></i>
+                Ajustes de inventario
+              </li>
+
+              <li>
+                <i data-lucide="check"></i>
+                Reportes básicos
+              </li>
+
+              <li>
+                <i data-lucide="check"></i>
+                Importación Excel / CSV
+              </li>
+
+              <li>
+                <i data-lucide="check"></i>
+                Trazabilidad de inventario
+              </li>
+
+              <li>
+                <i data-lucide="check"></i>
+                Hasta 2 usuarios
+              </li>
+            </ul>
+
+            <a href="register.html?plan=basic" class="btn-plan">Contratar</a>
+          </article>
+
+          <!-- PROFESIONAL -->
+
+          <article class="pricing-card pricing-card-featured">
+            <div class="popular-badge">MÁS POPULAR</div>
+
+            <div class="pricing-header">
+              <h3>Profesional</h3>
+
+              <p class="plan-description">Para empresas en crecimiento</p>
+            </div>
+
+            <div class="price">
+              <span> $99.900 </span>
+
+              <small> /mes </small>
+            </div>
+
+            <p class="price-note">
+              Para operaciones que necesitan más control.
+            </p>
+
+            <div class="trial-label">
+              <i data-lucide="gift"></i>
+              14 días gratis
+            </div>
+
+            <ul class="features">
+              <li>
+                <i data-lucide="check"></i>
+                Hasta 5 sucursales
+              </li>
+
+              <li>
+                <i data-lucide="check"></i>
+                Gestión completa de productos
+              </li>
+
+              <li>
+                <i data-lucide="check"></i>
+                Entradas, salidas y transferencias
+              </li>
+
+              <li>
+                <i data-lucide="check"></i>
+                Reportes avanzados
+              </li>
+
+              <li>
+                <i data-lucide="check"></i>
+                Gestión de clientes
+              </li>
+
+              <li>
+                <i data-lucide="check"></i>
+                Gestión de proveedores
+              </li>
+
+              <li>
+                <i data-lucide="check"></i>
+                Gestión de compras
+              </li>
+
+              <li>
+                <i data-lucide="check"></i>
+                Alertas inteligentes
+              </li>
+
+              <li>
+                <i data-lucide="check"></i>
+                Historial de movimientos
+              </li>
+
+              <li>
+                <i data-lucide="check"></i>
+                Trazabilidad de inventario
+              </li>
+            </ul>
+
+            <a
+              href="register.html?plan=professional"
+              class="btn-plan btn-plan-primary"
+              >Contratar</a
+            >
+          </article>
+
+          <!-- EMPRESARIAL -->
+
+          <article class="pricing-card">
+            <div class="pricing-header">
+              <h3>Empresarial</h3>
+
+              <p class="plan-description">Para operaciones a gran escala</p>
+            </div>
+
+            <div class="price">
+              <span> $199.900 </span>
+
+              <small> /mes </small>
+            </div>
+
+            <p class="price-note">
+              Control centralizado para grandes operaciones.
+            </p>
+
+            <div class="trial-label">
+              <i data-lucide="gift"></i>
+              14 días gratis
+            </div>
+
+            <ul class="features">
+              <li>
+                <i data-lucide="check"></i>
+                Sucursales ilimitadas
+              </li>
+
+              <li>
+                <i data-lucide="check"></i>
+                Usuarios ilimitados
+              </li>
+
+              <li>
+                <i data-lucide="check"></i>
+                Gestión centralizada
+              </li>
+
+              <li>
+                <i data-lucide="check"></i>
+                Inventario por sucursal
+              </li>
+
+              <li>
+                <i data-lucide="check"></i>
+                Transferencias entre sucursales
+              </li>
+
+              <li>
+                <i data-lucide="check"></i>
+                Gestión de ventas
+              </li>
+
+              <li>
+                <i data-lucide="check"></i>
+                Gestión de compras
+              </li>
+
+              <li>
+                <i data-lucide="check"></i>
+                Alertas inteligentes
+              </li>
+
+              <li>
+                <i data-lucide="check"></i>
+                Auditoría de inventario
+              </li>
+
+              <li>
+                <i data-lucide="check"></i>
+                Trazabilidad de inventario
+              </li>
+
+              <li>
+                <i data-lucide="check"></i>
+                Historial completo
+              </li>
+            </ul>
+
+            <a href="register.html?plan=enterprise" class="btn-plan"
+              >Contratar</a
+            >
+          </article>
         </div>
+      </div>
+    </section>
 
-    </div>
-
-</section>
-
-
-<!-- =====================================================
+    <!-- =====================================================
      CTA FINAL
 ====================================================== -->
 
-<section class="cta-final">
+    <section class="cta-final">
+      <div class="cta-glow"></div>
 
-    <div class="cta-glow"></div>
+      <div class="cta-content">
+        <span class="section-label"> EMPIEZA HOY </span>
 
-    <div class="cta-content">
-
-        <span class="section-label">
-            EMPIEZA HOY
-        </span>
-
-        <h2>
-            Lleva el control de tu negocio
-            al siguiente nivel.
-        </h2>
+        <h2>Lleva el control de tu negocio al siguiente nivel.</h2>
 
         <p>
-            Organiza tu inventario, entiende tus operaciones
-            y toma mejores decisiones con Kingdom Nexus.
+          Organiza tu inventario, entiende tus operaciones y toma mejores
+          decisiones con Kingdom Nexus.
         </p>
 
         <a href="register.html" class="btn-cta">
-            Contactanos
-            <i data-lucide="arrow-right"></i>
+          Contactanos
+          <i data-lucide="arrow-right"></i>
         </a>
+      </div>
+    </section>
 
-    </div>
-
-</section>
-
-
-<!-- =====================================================
+    <!-- =====================================================
      FOOTER
 ====================================================== -->
 
-<footer class="footer">
-
-    <div class="footer-grid">
-
+    <footer class="footer">
+      <div class="footer-grid">
         <div class="footer-brand">
+          <a href="#inicio" class="footer-logo">
+            <img src="images/nexus.png" alt="Kingdom Nexus" width="120" />
+          </a>
 
-            <a
-                href="#inicio"
-                class="footer-logo"
-            >
-                <img
-                    src="images/nexus.png"
-                    alt="Kingdom Nexus"
-                    width="120"
-                >
-            </a>
-
-            <p>
-                Gestión inteligente de inventario para negocios
-                que quieren crecer.
-            </p>
-
+          <p>
+            Gestión inteligente de inventario para negocios que quieren crecer.
+          </p>
         </div>
-
 
         <div>
+          <h4>Producto</h4>
 
-            <h4>
-                Producto
-            </h4>
+          <ul>
+            <li>
+              <a href="#funciones"> Funciones </a>
+            </li>
 
-            <ul>
-                <li>
-                    <a href="#funciones">
-                        Funciones
-                    </a>
-                </li>
+            <li>
+              <a href="#producto"> Plataforma </a>
+            </li>
 
-                <li>
-                    <a href="#producto">
-                        Plataforma
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#planes">
-                        Precios
-                    </a>
-                </li>
-            </ul>
-
+            <li>
+              <a href="#planes"> Precios </a>
+            </li>
+          </ul>
         </div>
-
 
         <div>
+          <h4>Empresa</h4>
 
-            <h4>
-                Empresa
-            </h4>
+          <ul>
+            <li>
+              <a href="#"> Sobre nosotros </a>
+            </li>
 
-            <ul>
-                <li>
-                    <a href="#">
-                        Sobre nosotros
-                    </a>
-                </li>
+            <li>
+              <a href="#"> Contacto </a>
+            </li>
 
-                <li>
-                    <a href="#">
-                        Contacto
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        Soporte
-                    </a>
-                </li>
-            </ul>
-
+            <li>
+              <a href="#"> Soporte </a>
+            </li>
+          </ul>
         </div>
-
 
         <div>
+          <h4>Legal</h4>
 
-            <h4>
-                Legal
-            </h4>
+          <ul>
+            <li>
+              <a href="#"> Privacidad </a>
+            </li>
 
-            <ul>
-                <li>
-                    <a href="#">
-                        Privacidad
-                    </a>
-                </li>
+            <li>
+              <a href="#"> Términos </a>
+            </li>
 
-                <li>
-                    <a href="#">
-                        Términos
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        Cookies
-                    </a>
-                </li>
-            </ul>
-
+            <li>
+              <a href="#"> Cookies </a>
+            </li>
+          </ul>
         </div>
+      </div>
 
-    </div>
+      <div class="footer-bottom">
+        <span> © 2026 Kingdom Coders. Todos los derechos reservados. </span>
 
+        <span> Gestión inteligente. Decisiones inteligentes. </span>
+      </div>
+    </footer>
 
-    <div class="footer-bottom">
-
-        <span>
-            © 2026 Kingdom Coders. Todos los derechos reservados.
-        </span>
-
-        <span>
-            Gestión inteligente. Decisiones inteligentes.
-        </span>
-
-    </div>
-
-</footer>
-
-
-<!-- =====================================================
+    <!-- =====================================================
      ICONOS
 ====================================================== -->
 
-<script>
-    lucide.createIcons();
-</script>
-
-</body>
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
 </html>

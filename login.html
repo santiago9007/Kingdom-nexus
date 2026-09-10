@@ -13,9 +13,7 @@
     <title>Iniciar sesión | Kingdom Nexus</title>
 
 
-    <!-- =====================================================
-         FUENTE
-    ====================================================== -->
+    <!-- Google Fonts -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
@@ -31,54 +29,52 @@
     >
 
 
-    <!-- =====================================================
-         ICONOS
-    ====================================================== -->
+    <!-- Lucide -->
 
     <script src="https://unpkg.com/lucide@latest"></script>
 
 
-    <!-- =====================================================
-         CSS
-    ====================================================== -->
+    <!-- CSS -->
 
-    <link
-        rel="stylesheet"
-        href="css/login.css"
-    >
+    <link rel="stylesheet" href="css/login.css">
 
 </head>
 
 
 <body>
 
+    <!-- =====================================================
+         ALERT
+    ====================================================== -->
+
+    <div
+        id="alertContainer"
+        class="alert-container"
+    >
+
+        <i data-lucide="circle-alert"></i>
+
+        <span id="alertMessage"></span>
+
+    </div>
+
+
+    <!-- =====================================================
+         LOGIN PAGE
+    ====================================================== -->
 
     <main class="login-page">
 
 
         <!-- =================================================
-             DECORACIÓN
+             BRAND
         ================================================== -->
 
-        <div class="background-grid"></div>
-
-        <div class="background-glow"></div>
-
-
-        <!-- =================================================
-             CONTENIDO
-        ================================================== -->
-
-        <section class="login-container">
-
-
-            <!-- =================================================
-                 LOGO
-            ================================================== -->
+        <section class="login-brand">
 
             <a
                 href="index.html"
-                class="login-logo"
+                class="brand-logo"
             >
 
                 <img
@@ -89,36 +85,109 @@
             </a>
 
 
-            <!-- =================================================
-                 CARD
-            ================================================== -->
+            <div class="brand-content">
 
-            <div class="login-card">
+                <span class="brand-label">
+                    KINGDOM NEXUS
+                </span>
 
 
-                <!-- =================================================
-                     HEADER
-                ================================================== -->
+                <h1>
+                    Todo tu negocio.
+                    <span>En un solo lugar.</span>
+                </h1>
 
-                <header class="login-header">
 
-                    <span class="login-badge">
-                        Acceso seguro
+                <p>
+                    Accede a tu plataforma y continúa
+                    gestionando tu negocio de forma
+                    sencilla, rápida y organizada.
+                </p>
+
+
+                <div class="login-highlight">
+
+                    <div class="highlight-icon">
+
+                        <i data-lucide="shield-check"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            Tu negocio, bajo control
+                        </strong>
+
+                        <small>
+                            Inventario, ventas y operaciones
+                            desde una sola plataforma.
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <p class="brand-footer">
+                © 2026 Kingdom Nexus
+            </p>
+
+        </section>
+
+
+        <!-- =================================================
+             LOGIN FORM
+        ================================================== -->
+
+        <section class="login-form-section">
+
+            <div class="form-container">
+
+
+                <!-- Mobile logo -->
+
+                <div class="mobile-logo">
+
+                    <a href="index.html">
+
+                        <img
+                            src="images/nexus.png"
+                            alt="Kingdom Nexus"
+                        >
+
+                    </a>
+
+                </div>
+
+
+                <!-- Header -->
+
+                <div class="form-header">
+
+                    <span class="form-badge">
+                        Bienvenido de nuevo
                     </span>
 
-                    <h1>
-                        Bienvenido
-                    </h1>
+
+                    <h2>
+                        Iniciar sesión
+                    </h2>
+
 
                     <p>
-                        Ingresa a tu cuenta para continuar.
+                        Ingresa tus datos para acceder
+                        a tu cuenta.
                     </p>
 
-                </header>
+                </div>
 
 
                 <!-- =================================================
-                     FORMULARIO
+                     FORM
                 ================================================== -->
 
                 <form
@@ -127,9 +196,7 @@
                 >
 
 
-                    <!-- =============================================
-                         EMAIL
-                    ============================================== -->
+                    <!-- Email -->
 
                     <div class="form-group">
 
@@ -140,11 +207,7 @@
 
                         <div class="input-wrapper">
 
-                            <i
-                                data-lucide="mail"
-                                aria-hidden="true"
-                            ></i>
-
+                            <i data-lucide="mail"></i>
 
                             <input
                                 type="email"
@@ -163,9 +226,7 @@
                     </div>
 
 
-                    <!-- =============================================
-                         PASSWORD
-                    ============================================== -->
+                    <!-- Password -->
 
                     <div class="form-group">
 
@@ -185,10 +246,7 @@
 
                         <div class="input-wrapper">
 
-                            <i
-                                data-lucide="lock-keyhole"
-                                aria-hidden="true"
-                            ></i>
+                            <i data-lucide="lock-keyhole"></i>
 
 
                             <input
@@ -204,7 +262,7 @@
                             <button
                                 type="button"
                                 class="toggle-password"
-                                data-target="password"
+                                id="togglePassword"
                                 aria-label="Mostrar contraseña"
                             >
 
@@ -220,9 +278,7 @@
                     </div>
 
 
-                    <!-- =============================================
-                         REMEMBER
-                    ============================================== -->
+                    <!-- Remember -->
 
                     <label class="remember-me">
 
@@ -234,110 +290,57 @@
 
                         <span class="checkbox-custom"></span>
 
+
                         <span>
-                            Mantener mi sesión iniciada
+                            Mantener sesión iniciada
                         </span>
 
                     </label>
 
 
-                    <!-- =============================================
-                         BUTTON
-                    ============================================== -->
+                    <!-- Submit -->
 
                     <button
                         type="submit"
                         class="login-button"
                     >
 
-                        <span>
-                            Iniciar sesión
-                        </span>
+                        Iniciar sesión
 
                         <i data-lucide="arrow-right"></i>
 
                     </button>
 
 
+                    <!-- Register -->
+
+                    <p class="register-link">
+
+                        ¿Aún no tienes una cuenta?
+
+                        <a href="index.html">
+                            Crear cuenta
+                        </a>
+
+                    </p>
+
                 </form>
-
-
-                <!-- =================================================
-                     DIVIDER
-                ================================================== -->
-
-                <div class="divider">
-
-                    <span></span>
-
-                    <p>o</p>
-
-                    <span></span>
-
-                </div>
-
-
-                <!-- =================================================
-                     REGISTER
-                ================================================== -->
-
-                <p class="register-link">
-
-                    ¿No tienes una cuenta?
-
-                    <a href="register.html">
-                        Registrarse
-                    </a>
-
-                </p>
-
 
             </div>
 
-
-            <!-- =================================================
-                 BACK
-            ================================================== -->
-
-            <a
-                href="index.html"
-                class="back-link"
-            >
-
-                <i data-lucide="arrow-left"></i>
-
-                Volver a Kingdom Nexus
-
-            </a>
-
-
-            <!-- =================================================
-                 FOOTER
-            ================================================== -->
-
-            <p class="login-footer">
-                © 2026 Kingdom Nexus
-            </p>
-
-
         </section>
-
 
     </main>
 
 
-    <!-- =====================================================
-         ICONOS
-    ====================================================== -->
+    <!-- Lucide -->
 
     <script>
         lucide.createIcons();
     </script>
 
 
-    <!-- =====================================================
-         JAVASCRIPT
-    ====================================================== -->
+    <!-- Login JS -->
 
     <script src="js/login.js"></script>
 
