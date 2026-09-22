@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Productos | Kingdom Nexus</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <link rel="stylesheet" href="../css/variables.css" />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/dashboard.css" />
+    <link rel="stylesheet" href="../css/plan-dashboard.css" />
+  </head>
+  <body>
+    <div class="dashboard-shell">
+      <aside class="sidebar">
+        <div>
+          <div class="brand-box">
+            <img src="../images/nexus.png" alt="Kingdom Nexus" />
+          </div>
+          <nav class="nav-menu" aria-label="Menú profesional">
+            <a class="nav-item" href="dashboard.html">
+              <i data-lucide="layout-dashboard"></i><span>Dashboard</span>
+            </a>
+            <a class="nav-item active" href="productos.html" aria-current="page">
+              <i data-lucide="package"></i><span>Productos</span>
+            </a>
+            <button class="nav-item" type="button">
+              <i data-lucide="boxes"></i><span>Inventario</span>
+            </button>
+            <button class="nav-item" type="button">
+              <i data-lucide="arrow-right-left"></i><span>Movimientos</span>
+            </button>
+            <button class="nav-item" type="button">
+              <i data-lucide="users"></i><span>Clientes</span>
+            </button>
+            <button class="nav-item" type="button">
+              <i data-lucide="truck"></i><span>Proveedores</span>
+            </button>
+            <button class="nav-item" type="button">
+              <i data-lucide="shopping-cart"></i><span>Compras</span>
+            </button>
+            <button class="nav-item" type="button">
+              <i data-lucide="chart-no-axes-combined"></i
+              ><span>Reportes avanzados</span>
+            </button>
+          </nav>
+        </div>
+        <div class="plan-card">
+          <span class="plan-pill">BASICO</span><strong>Plan Basico</strong
+          ><small>$49.900 / mes</small>
+        </div>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Panel Basico</p>
+            <h1>Productos</h1>
+            <p class="module-intro">
+              Administra el catálogo de tu negocio: crea, edita y activa o
+              desactiva productos. Las existencias se consultan aquí y se
+              gestionan desde Inventario y Movimientos.
+            </p>
+          </div>
+          <div class="topbar-actions">
+            <div class="status-badge">
+              <i data-lucide="shield-check"></i> Suscripción activa
+            </div>
+            <div class="user-box">
+              <span class="avatar">U</span>
+              <div>
+                <strong id="userName">Usuario</strong>
+                <small id="userEmail">usuario@ejemplo.com</small>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <section class="module-workspace" aria-labelledby="catalogoTitulo">
+          <div class="module-panel active">
+            <div class="panel-header">
+              <h3 id="catalogoTitulo">Catálogo de productos</h3>
+              <button type="button" class="primary-button" id="nuevoProducto">
+                <i data-lucide="plus" aria-hidden="true"></i>
+                <span>Nuevo producto</span>
+              </button>
+            </div>
+
+            <div
+              id="productosFeedback"
+              class="module-feedback"
+              role="status"
+              aria-live="polite"
+              hidden
+            ></div>
+
+            <div
+              class="module-form"
+              role="search"
+              aria-label="Buscar y filtrar productos"
+            >
+              <div class="form-grid">
+                <label for="buscarProducto">
+                  <span>Buscar</span>
+                  <input
+                    type="search"
+                    id="buscarProducto"
+                    name="buscar"
+                    autocomplete="off"
+                    placeholder="Nombre, SKU o categoría"
+                  />
+                </label>
+                <label for="filtroEstado">
+                  <span>Estado</span>
+                  <select id="filtroEstado" name="estado">
+                    <option value="todos">Todos</option>
+                    <option value="activos">Activos</option>
+                    <option value="inactivos">Inactivos</option>
+                  </select>
+                </label>
+                <label for="filtroCategoria">
+                  <span>Categoría</span>
+                  <select id="filtroCategoria" name="categoria">
+                    <option value="todas">Todas</option>
+                  </select>
+                </label>
+              </div>
+            </div>
+
+            <form
+              id="productoForm"
+              class="module-form"
+              novalidate
+              hidden
+              aria-labelledby="productoFormTitulo"
+            >
+              <div class="panel-header">
+                <h3 id="productoFormTitulo">Nuevo producto</h3>
+              </div>
+
+              <div class="form-grid">
+                <label for="productoNombre">
+                  <span>Nombre *</span>
+                  <input
+                    type="text"
+                    id="productoNombre"
+                    name="name"
+                    maxlength="120"
+                    autocomplete="off"
+                    placeholder="Ej. Aceite de oliva"
+                    aria-describedby="errorNombre"
+                  />
+                  <small class="field-error" id="errorNombre" hidden></small>
+                </label>
+                <label for="productoSku">
+                  <span>SKU *</span>
+                  <input
+                    type="text"
+                    id="productoSku"
+                    name="sku"
+                    maxlength="40"
+                    autocomplete="off"
+                    spellcheck="false"
+                    placeholder="Ej. ACE-001"
+                    aria-describedby="errorSku"
+                  />
+                  <small class="field-error" id="errorSku" hidden></small>
+                </label>
+                <label for="productoCategoria">
+                  <span>Categoría</span>
+                  <input
+                    type="text"
+                    id="productoCategoria"
+                    name="category"
+                    maxlength="80"
+                    autocomplete="off"
+                    list="categoriasProducto"
+                    placeholder="Ej. Alimentación"
+                  />
+                </label>
+                <label for="productoUnidad">
+                  <span>Unidad</span>
+                  <input
+                    type="text"
+                    id="productoUnidad"
+                    name="unit"
+                    maxlength="20"
+                    autocomplete="off"
+                    list="unidadesProducto"
+                    placeholder="Ej. Caja"
+                  />
+                </label>
+              </div>
+
+              <div class="form-grid">
+                <label for="productoPrecioVenta">
+                  <span>Precio de venta</span>
+                  <input
+                    type="number"
+                    id="productoPrecioVenta"
+                    name="sales_price"
+                    min="0"
+                    step="0.01"
+                    inputmode="decimal"
+                    placeholder="0.00"
+                    aria-describedby="errorPrecioVenta"
+                  />
+                  <small class="field-error" id="errorPrecioVenta" hidden></small>
+                </label>
+                <label for="productoPrecioCosto">
+                  <span>Precio de costo</span>
+                  <input
+                    type="number"
+                    id="productoPrecioCosto"
+                    name="cost"
+                    min="0"
+                    step="0.01"
+                    inputmode="decimal"
+                    placeholder="0.00"
+                    aria-describedby="errorPrecioCosto"
+                  />
+                  <small class="field-error" id="errorPrecioCosto" hidden></small>
+                </label>
+                <label for="productoStockMinimo">
+                  <span>Stock mínimo</span>
+                  <input
+                    type="number"
+                    id="productoStockMinimo"
+                    name="min_stock"
+                    min="0"
+                    step="0.01"
+                    inputmode="decimal"
+                    placeholder="0"
+                    aria-describedby="errorStockMinimo"
+                  />
+                  <small class="field-error" id="errorStockMinimo" hidden></small>
+                </label>
+                <label for="productoStockInicial" id="campoStockInicial">
+                  <span>Stock inicial</span>
+                  <input
+                    type="number"
+                    id="productoStockInicial"
+                    name="initial_stock"
+                    min="0"
+                    step="0.01"
+                    inputmode="decimal"
+                    placeholder="0"
+                    aria-describedby="errorStockInicial"
+                  />
+                  <small class="field-error" id="errorStockInicial" hidden></small>
+                </label>
+              </div>
+
+              <label for="productoDescripcion">
+                <span>Descripción</span>
+                <textarea
+                  id="productoDescripcion"
+                  name="description"
+                  rows="3"
+                  maxlength="500"
+                  placeholder="Notas internas o detalle del producto"
+                ></textarea>
+              </label>
+
+              <div class="form-actions">
+                <button type="submit" class="primary-button" id="guardarProducto">
+                  <i data-lucide="save" aria-hidden="true"></i>
+                  <span id="guardarTexto">Guardar producto</span>
+                </button>
+                <button
+                  type="button"
+                  class="secondary-button"
+                  id="cancelarProducto"
+                >
+                  Cancelar
+                </button>
+              </div>
+
+              <datalist id="categoriasProducto"></datalist>
+              <datalist id="unidadesProducto">
+                <option value="Unidad"></option>
+                <option value="Caja"></option>
+                <option value="Paquete"></option>
+                <option value="Docena"></option>
+                <option value="Kilogramo"></option>
+                <option value="Litro"></option>
+                <option value="Metro"></option>
+              </datalist>
+            </form>
+
+            <div class="table-wrap">
+              <table class="data-table" aria-label="Lista de productos">
+                <thead>
+                  <tr>
+                    <th scope="col">Producto</th>
+                    <th scope="col">SKU</th>
+                    <th scope="col">Categoría</th>
+                    <th scope="col">Precio venta</th>
+                    <th scope="col">Stock</th>
+                    <th scope="col">Estado</th>
+                    <th scope="col">Acciones</th>
+                  </tr>
+                </thead>
+                <tbody id="productosTabla"></tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script>
+      if (window.lucide) {
+        lucide.createIcons();
+      }
+    </script>
+    <script>
+      // auth.js asume que el CDN de Supabase cargó; si no, el módulo muestra su estado de error.
+      if (window.supabase) {
+        document.write('<script src="../js/auth.js"><\/script>');
+      }
+    </script>
+    <script src="../js/dashboard.js"></script>
+    <script src="../js/productos.js"></script>
+  </body>
+</html>
