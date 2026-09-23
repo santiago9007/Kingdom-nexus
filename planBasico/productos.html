@@ -28,7 +28,11 @@
             <a class="nav-item" href="dashboard.html">
               <i data-lucide="layout-dashboard"></i><span>Dashboard</span>
             </a>
-            <a class="nav-item active" href="productos.html" aria-current="page">
+            <a
+              class="nav-item active"
+              href="productos.html"
+              aria-current="page"
+            >
               <i data-lucide="package"></i><span>Productos</span>
             </a>
             <button class="nav-item" type="button">
@@ -212,7 +216,11 @@
                     placeholder="0.00"
                     aria-describedby="errorPrecioVenta"
                   />
-                  <small class="field-error" id="errorPrecioVenta" hidden></small>
+                  <small
+                    class="field-error"
+                    id="errorPrecioVenta"
+                    hidden
+                  ></small>
                 </label>
                 <label for="productoPrecioCosto">
                   <span>Precio de costo</span>
@@ -226,7 +234,11 @@
                     placeholder="0.00"
                     aria-describedby="errorPrecioCosto"
                   />
-                  <small class="field-error" id="errorPrecioCosto" hidden></small>
+                  <small
+                    class="field-error"
+                    id="errorPrecioCosto"
+                    hidden
+                  ></small>
                 </label>
                 <label for="productoStockMinimo">
                   <span>Stock mínimo</span>
@@ -240,7 +252,11 @@
                     placeholder="0"
                     aria-describedby="errorStockMinimo"
                   />
-                  <small class="field-error" id="errorStockMinimo" hidden></small>
+                  <small
+                    class="field-error"
+                    id="errorStockMinimo"
+                    hidden
+                  ></small>
                 </label>
                 <label for="productoStockInicial" id="campoStockInicial">
                   <span>Stock inicial</span>
@@ -254,7 +270,11 @@
                     placeholder="0"
                     aria-describedby="errorStockInicial"
                   />
-                  <small class="field-error" id="errorStockInicial" hidden></small>
+                  <small
+                    class="field-error"
+                    id="errorStockInicial"
+                    hidden
+                  ></small>
                 </label>
               </div>
 
@@ -270,7 +290,11 @@
               </label>
 
               <div class="form-actions">
-                <button type="submit" class="primary-button" id="guardarProducto">
+                <button
+                  type="submit"
+                  class="primary-button"
+                  id="guardarProducto"
+                >
                   <i data-lucide="save" aria-hidden="true"></i>
                   <span id="guardarTexto">Guardar producto</span>
                 </button>
@@ -320,13 +344,7 @@
         lucide.createIcons();
       }
     </script>
-    <script>
-      // auth.js asume que el CDN de Supabase cargó; si no, el módulo muestra su estado de error.
-      if (window.supabase) {
-        document.write('<script src="../js/auth.js"><\/script>');
-      }
-    </script>
     <script src="../js/dashboard.js"></script>
-    <script src="../js/productos.js"></script>
+    <script src="../js/products.js"></script>
   </body>
 </html>
