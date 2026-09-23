@@ -1,3 +1,11 @@
+const SUPABASE_URL = "https://poghdicqjjrtxucuoqev.supabase.co";
+const SUPABASE_KEY = "sb_publishable_-jDBMc58Msbi22Rys16pAQ_T3Q2CJ8I";
+
+const supabaseClient = supabase.createClient(
+    SUPABASE_URL,
+    SUPABASE_KEY
+);
+
 /* DOM */
 
 const form = document.getElementById("loginForm");
@@ -36,7 +44,7 @@ togglePassword.addEventListener("click", function(){
 
 /* LOGIN */
 
-form.addEventListener("submit", function(event){
+form.addEventListener("submit", async function(event){
     event.preventDefault();
 
     /* VALIDACIÓN HTML */
@@ -49,39 +57,62 @@ form.addEventListener("submit", function(event){
 
     /* OBTENER REGISTRO */
 
-    const registro = JSON.parse(sessionStorage.getItem("registro"));
+    const emailValue = email.value.trim().toLowerCase();
+    const passwordValue = password.value;
 
-    if(!registro){
-        showAlert("No encontramos una cuenta registrada.");
+    const { data: loginData, error: loginError } = await supabaseClient.auth.signInWithPassword({
+        email: emailValue,
+        password: passwordValue
+    });
 
+    //ERROR
+
+    if(loginError){
+        showAlert("Correo o contraseña incorrectos");
         return;
     }
 
-    /* VALIDAR CREDENCIALES */
+    //USUARIO AUTENTICADO
 
-    const emailCorrecto = email.value.trim().toLowerCase() === registro.email.trim().toLowerCase();
+    const user = loginData.user;
 
-    const passwordCorrecto = password.value === registro.password;
+    console.log("Usuario", user)
 
-    if(!emailCorrecto || !passwordCorrecto){
-        showAlert("Correo o contraseña incorrecto");
+    //BUSCAR DATOS EN REGISTRO
 
+    const { data: registerData, error: registerError } = await supabaseClient
+            .from("register")
+            .select("id, name, lastname, email, plans")
+            .eq("id", user.id)
+            .single()
+
+    //ERROR AL BUSCAR EL REGISTRO
+
+    if(registerError){
+        console.error(registerError);
+
+        showAlert("No encontramos la información de tu cuenta")
+
+        /* CERRAMOS LA SESIÓN PORQUE EL USUARIO NO TIENE REGISTRO ASOCIADO */
+
+        await supabaseClient.auth.signOut();
         return;
     }
-
-    /* LOGIN CORRECTO */
-
-    sessionStorage.setItem("sesionActiva",
-        "true"
-    );
-
-    sessionStorage.setItem("authUser", JSON.stringify(registro));
-
+    
+   
     const destinosPorPlan = {
         basic: "../planBasico/dashboard.html",
         professional: "../planProfesional/dashboard.html",
         enterprise: "../planEmpresarial/dashboard.html"
     };
 
-    window.location.href = destinosPorPlan[registro.plan] || "dashboard.html";
+     //REDIRECCIÓN
+
+     const destino = destinosPorPlan[registerData.plans]
+
+     if(!destino){
+        showAlert("El plan de tu cuenta no es válido")
+     }
+
+    window.location.href = destino
 })

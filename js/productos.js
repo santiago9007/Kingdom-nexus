@@ -127,7 +127,6 @@
     }
 
     function enlazarEventos() {
-        elementos.nuevo.addEventListener("click", abrirFormularioNuevo);
         elementos.form.addEventListener("submit", manejarEnvio);
         elementos.cancelar.addEventListener("click", cerrarFormulario);
         elementos.buscar.addEventListener("input", manejarFiltros);
@@ -182,18 +181,6 @@
         }
 
         alternarEstado(producto);
-    }
-
-    function abrirFormularioNuevo() {
-        if (guardando) return;
-
-        productoEditandoId = null;
-        elementos.form.reset();
-        mostrarErrores({});
-        elementos.formTitulo.textContent = "Nuevo producto";
-        elementos.campoStockInicial.hidden = false;
-        elementos.form.hidden = false;
-        elementos.campos.name.focus();
     }
 
     function abrirFormularioEdicion(producto) {
