@@ -394,6 +394,10 @@ button {
 }
 
 .primary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
     padding: 10px 16px;
     border-radius: 10px;
     background: var(--primary);
@@ -401,6 +405,12 @@ button {
     font-weight: 600;
     box-shadow: 0 8px 18px rgba(37, 99, 235, 0.18);
     transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.primary-button svg {
+    width: 17px;
+    height: 17px;
+    flex: 0 0 auto;
 }
 
 .primary-button:hover {
@@ -805,4 +815,159 @@ body,
 .module-tab.active,
 .primary-button {
     box-shadow: 0 8px 16px rgba(238, 108, 77, 0.2);
+}
+
+/* =====================================================
+   MÓDULO DE PRODUCTOS
+===================================================== */
+
+.module-intro {
+    margin: 10px 0 0;
+    max-width: 70ch;
+    color: var(--slate-600);
+    line-height: 1.6;
+}
+
+.module-form[hidden],
+.module-form label[hidden] {
+    display: none;
+}
+
+.module-form textarea {
+    width: 100%;
+    min-height: 92px;
+    padding: 10px 12px;
+    border: 1px solid var(--slate-200);
+    border-radius: 10px;
+    background: var(--white);
+    color: var(--slate-900);
+    font: inherit;
+    resize: vertical;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.module-form textarea:focus {
+    border-color: rgba(59, 130, 246, 0.5);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.12);
+}
+
+.field-error {
+    color: var(--danger);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.module-form input[aria-invalid="true"],
+.module-form select[aria-invalid="true"],
+.module-form textarea[aria-invalid="true"] {
+    border-color: var(--danger);
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.12);
+}
+
+.form-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.primary-button:disabled,
+.secondary-button:disabled,
+.icon-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.secondary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border: 1px solid var(--slate-200);
+    border-radius: 10px;
+    background: var(--white);
+    color: var(--slate-700);
+    font-weight: 600;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.secondary-button:hover:not(:disabled) {
+    background: var(--slate-50);
+    border-color: var(--slate-300);
+}
+
+.icon-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border: 1px solid var(--slate-200);
+    border-radius: 8px;
+    background: var(--white);
+    color: var(--slate-600);
+    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.icon-button:hover:not(:disabled) {
+    background: var(--slate-50);
+    border-color: var(--slate-300);
+    color: var(--slate-900);
+}
+
+.icon-button svg {
+    width: 16px;
+    height: 16px;
+}
+
+.table-actions {
+    display: flex;
+    gap: 6px;
+}
+
+.table-state {
+    padding: 26px 12px;
+    text-align: center;
+    color: var(--slate-500);
+    font-size: 13px;
+}
+
+.table-state .secondary-button {
+    margin-top: 12px;
+}
+
+.row-note {
+    display: block;
+    margin-top: 4px;
+    max-width: 340px;
+    color: var(--slate-500);
+    font-size: 12px;
+    font-weight: 400;
+    overflow-wrap: anywhere;
+}
+
+.module-feedback {
+    margin-bottom: 16px;
+    padding: 12px 14px;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.module-feedback[hidden] {
+    display: none;
+}
+
+.module-feedback.success {
+    background: var(--success-soft);
+    color: var(--success);
+    border: 1px solid rgba(5, 150, 105, 0.18);
+}
+
+.module-feedback.error {
+    background: var(--danger-soft);
+    color: var(--danger);
+    border: 1px solid rgba(220, 38, 38, 0.18);
 }
