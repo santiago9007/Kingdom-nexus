@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proveedores | Kingdom Nexus</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="../css/variables.css" />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/dashboard.css" />
+    <link rel="stylesheet" href="../css/plan-dashboard.css" />
+  </head>
+  <body>
+    <div class="dashboard-shell">
+      <aside class="sidebar">
+        <div>
+          <div class="brand-box">
+            <img src="../images/nexus.png" alt="Kingdom Nexus" />
+          </div>
+          <nav class="nav-menu" aria-label="Menú profesional">
+            <a class="nav-item" href="dashboard.html">
+              <i data-lucide="layout-dashboard"></i><span>Dashboard</span>
+            </a>
+            <button class="nav-item" type="button">
+              <i data-lucide="package"></i><span>Productos</span>
+            </button>
+            <button class="nav-item" type="button">
+              <i data-lucide="boxes"></i><span>Inventario</span>
+            </button>
+            <button class="nav-item" type="button">
+              <i data-lucide="arrow-right-left"></i><span>Movimientos</span>
+            </button>
+            <button class="nav-item" type="button">
+              <i data-lucide="users"></i><span>Clientes</span>
+            </button>
+            <a class="nav-item active" href="proveedores.html">
+              <i data-lucide="truck"></i><span>Proveedores</span>
+            </a>
+            <button class="nav-item" type="button">
+              <i data-lucide="shopping-cart"></i><span>Compras</span>
+            </button>
+            <button class="nav-item" type="button">
+              <i data-lucide="chart-no-axes-combined"></i><span>Reportes avanzados</span>
+            </button>
+          </nav>
+        </div>
+        <div class="plan-card">
+          <span class="plan-pill">BASICO</span><strong>Plan Basico</strong><small>$49.900 / mes</small>
+        </div>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Panel Basico</p>
+            <h1>Proveedores</h1>
+          </div>
+          <div class="topbar-actions">
+            <div class="status-badge">
+              <i data-lucide="shield-check"></i> Suscripción activa
+            </div>
+            <div class="user-box">
+              <span class="avatar">U</span>
+              <div>
+                <strong id="userName">Usuario</strong>
+                <small id="userEmail">usuario@ejemplo.com</small>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <section class="supplier-section">
+          <article class="panel supplier-panel">
+            <div class="panel-header">
+              <h3>Gestión de proveedores</h3>
+              <span class="panel-badge">Suppliers</span>
+            </div>
+
+            <div id="supplierMessage" class="supplier-message info">
+              Cargando proveedores...
+            </div>
+
+            <div class="supplier-layout">
+              <form id="supplierForm" class="supplier-form" novalidate>
+                <input type="hidden" id="supplierEditId" />
+
+                <div class="supplier-form-grid">
+                  <div class="form-field">
+                    <label for="supplierName">Nombre</label>
+                    <input
+                      type="text"
+                      id="supplierName"
+                      name="supplierName"
+                      placeholder="Ej: Distribuidora XYZ"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-field">
+                    <label for="supplierTaxId">NIT / RUC</label>
+                    <input
+                      type="text"
+                      id="supplierTaxId"
+                      name="supplierTaxId"
+                      placeholder="Ej: 900123456-7"
+                    />
+                  </div>
+
+                  <div class="form-field">
+                    <label for="supplierContactPerson">Persona de contacto</label>
+                    <input
+                      type="text"
+                      id="supplierContactPerson"
+                      name="supplierContactPerson"
+                      placeholder="Ej: Ana López"
+                    />
+                  </div>
+
+                  <div class="form-field">
+                    <label for="supplierEmail">Correo</label>
+                    <input
+                      type="email"
+                      id="supplierEmail"
+                      name="supplierEmail"
+                      placeholder="Ej: contacto@proveedor.com"
+                    />
+                  </div>
+
+                  <div class="form-field">
+                    <label for="supplierPhone">Teléfono</label>
+                    <input
+                      type="text"
+                      id="supplierPhone"
+                      name="supplierPhone"
+                      placeholder="Ej: 3001234567"
+                    />
+                  </div>
+
+                  <div class="form-field">
+                    <label for="supplierCity">Ciudad</label>
+                    <input
+                      type="text"
+                      id="supplierCity"
+                      name="supplierCity"
+                      placeholder="Ej: Bogotá"
+                    />
+                  </div>
+
+                  <div class="form-field full-width">
+                    <label for="supplierAddress">Dirección</label>
+                    <input
+                      type="text"
+                      id="supplierAddress"
+                      name="supplierAddress"
+                      placeholder="Ej: Calle 10 # 20-30"
+                    />
+                  </div>
+
+                  <div class="form-field full-width">
+                    <label for="supplierNotes">Notas</label>
+                    <textarea
+                      id="supplierNotes"
+                      name="supplierNotes"
+                      rows="3"
+                      placeholder="Comentarios internos del proveedor"
+                    ></textarea>
+                  </div>
+                </div>
+
+                <div class="supplier-actions">
+                  <button type="submit" class="primary-button" id="submitSupplierButton">
+                    Guardar proveedor
+                  </button>
+                  <button
+                    type="button"
+                    class="secondary-button"
+                    id="cancelSupplierEdit"
+                    hidden
+                  >
+                    Cancelar edición
+                  </button>
+                </div>
+              </form>
+
+              <div class="supplier-table-wrapper">
+                <table class="supplier-table">
+                  <thead>
+                    <tr>
+                      <th>Nombre</th>
+                      <th>NIT / RUC</th>
+                      <th>Contacto</th>
+                      <th>Email</th>
+                      <th>Ciudad</th>
+                      <th>Estado</th>
+                      <th>Acciones</th>
+                    </tr>
+                  </thead>
+                  <tbody id="supplierTableBody">
+                    <tr>
+                      <td colspan="7" class="empty-row">Sin proveedores cargados.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <script>
+      lucide.createIcons();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../js/operacion_comercial/supliers.js"></script>
+    <script src="../js/planBasico/proveedores.js"></script>
+    <script src="../js/dashboard.js"></script>
+  </body>
+</html>

@@ -6,6 +6,204 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.supplier-section {
+    margin-top: 24px;
+}
+
+.supplier-panel {
+    padding: 24px;
+}
+
+.supplier-message {
+    margin: 18px 0;
+    padding: 10px 12px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    display: none;
+}
+
+.supplier-message.visible {
+    display: block;
+}
+
+.supplier-message.info {
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    color: #1d4ed8;
+}
+
+.supplier-message.success {
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    color: #047857;
+}
+
+.supplier-message.error {
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    color: #b91c1c;
+}
+
+.supplier-layout {
+    display: grid;
+    grid-template-columns: minmax(280px, 380px) minmax(0, 1fr);
+    gap: 24px;
+    align-items: start;
+}
+
+.supplier-form {
+    background: rgba(15, 23, 42, 0.02);
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    border-radius: 18px;
+    padding: 18px;
+}
+
+.supplier-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-field label {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.form-field input,
+.form-field textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid rgba(15, 23, 42, 0.12);
+    background: #ffffff;
+    font-family: inherit;
+    font-size: 0.9rem;
+    color: #111827;
+    box-sizing: border-box;
+}
+
+.form-field textarea {
+    resize: vertical;
+    min-height: 86px;
+}
+
+.form-field.full-width {
+    grid-column: 1 / -1;
+}
+
+.supplier-actions {
+    margin-top: 18px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.primary-button,
+.secondary-button,
+.icon-button {
+    border: none;
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.primary-button {
+    background: linear-gradient(135deg, #0f172a, #1d4ed8);
+    color: #ffffff;
+}
+
+.secondary-button {
+    background: #e5e7eb;
+    color: #111827;
+}
+
+.primary-button:hover,
+.secondary-button:hover,
+.icon-button:hover {
+    transform: translateY(-1px);
+}
+
+.supplier-table-wrapper {
+    overflow-x: auto;
+}
+
+.supplier-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 760px;
+}
+
+.supplier-table th,
+.supplier-table td {
+    padding: 12px 10px;
+    border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+    text-align: left;
+    font-size: 0.88rem;
+    vertical-align: top;
+}
+
+.supplier-table th {
+    font-weight: 700;
+    color: #374151;
+    background: rgba(148, 163, 184, 0.08);
+}
+
+.status-chip {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 8px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.status-chip.active {
+    background: rgba(16, 185, 129, 0.12);
+    color: #047857;
+}
+
+.status-chip.inactive {
+    background: rgba(239, 68, 68, 0.12);
+    color: #b91c1c;
+}
+
+.supplier-actions-cell {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.icon-button {
+    padding: 7px 10px;
+    font-size: 0.8rem;
+}
+
+.icon-button.edit {
+    background: rgba(59, 130, 246, 0.12);
+    color: #1d4ed8;
+}
+
+.icon-button.delete {
+    background: rgba(239, 68, 68, 0.12);
+    color: #b91c1c;
+}
+
+.empty-row {
+    text-align: center;
+    color: #6b7280;
+    padding: 24px 12px;
+}
+
 @media (max-width: 900px) {
     .dashboard-shell {
         grid-template-columns: 1fr;
@@ -27,6 +225,10 @@
     .main-panel {
         padding: 24px 20px;
     }
+
+    .supplier-layout {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 560px) {
@@ -37,7 +239,8 @@
     }
 
     .nav-menu,
-    .plan-module-grid .modules-grid {
+    .plan-module-grid .modules-grid,
+    .supplier-form-grid {
         grid-template-columns: 1fr;
     }
 }
