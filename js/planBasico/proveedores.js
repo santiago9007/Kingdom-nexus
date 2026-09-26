@@ -96,7 +96,13 @@ async function loadSuppliers() {
     showSupplierMessage(`Se cargaron ${suppliers.length} proveedores.`, 'success');
   } catch (error) {
     console.error(error);
-    showSupplierMessage(error?.message || 'Error al cargar proveedores.', 'error');
+
+    const status = error?.status || error?.code;
+    const message = status === 403 || status === '42501'
+      ? 'Supabase bloqueó la consulta por políticas RLS o porque la tabla no existe. Revisa la tabla public.suppliers y sus permisos.'
+      : error?.message || 'Error al cargar proveedores.';
+
+    showSupplierMessage(message, 'error');
   }
 }
 

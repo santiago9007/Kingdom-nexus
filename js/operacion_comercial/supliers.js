@@ -5,11 +5,16 @@
   const DEFAULT_URL = 'https://poghdicqjjrtxucuoqev.supabase.co';
   const DEFAULT_KEY = 'sb_publishable_-jDBMc58Msbi22Rys16pAQ_T3Q2CJ8I';
 
+  window.SUPABASE_URL = window.SUPABASE_URL || DEFAULT_URL;
+  window.SUPABASE_KEY = window.SUPABASE_KEY || DEFAULT_KEY;
+
   function resolveSupabaseClient() {
     if (window.supabase && typeof window.supabase.createClient === 'function') {
-      const url = window.SUPABASE_URL || DEFAULT_URL;
-      const key = window.SUPABASE_KEY || DEFAULT_KEY;
-      return window.supabase.createClient(url, key);
+      return window.supabase.createClient(window.SUPABASE_URL, window.SUPABASE_KEY);
+    }
+
+    if (typeof supabase !== 'undefined' && supabase && typeof supabase.createClient === 'function') {
+      return supabase.createClient(window.SUPABASE_URL, window.SUPABASE_KEY);
     }
 
     if (typeof supabaseClient !== 'undefined' && supabaseClient && typeof supabaseClient.from === 'function') {
